@@ -13,9 +13,9 @@ The app is deployed in Heroku. URL: https://degrassi-parliament-06647.herokuapp.
 
     EG:https://degrassi-parliament-06647.herokuapp.com/branch/ABHY0065009/
     
-    ![alt text](Result1.jpg?raw=true)
+    ![alt text](Result1.PNG?raw=true)
     
 
 2. To get details of all branches of the bank in the city, make a POST request to https://degrassi-parliament-06647.herokuapp.com/all with parameters name and city.
     
-    ![alt text](result2.jpg?raw=true)
+    ![alt text](result2.PNG?raw=true)
