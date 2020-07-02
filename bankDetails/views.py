@@ -28,8 +28,11 @@ class AllBanksInCityView(APIView):
             bank = Banks.objects.get(name=bank_name.upper())
             banks_in_city = Branches.objects.filter(bank_id = bank.id, city = city.upper()).values('ifsc','branch','address','city','district','state')
             resultData = json.dumps(list(banks_in_city))
-            #print(resultData)
-            return Response({'result':resultData})
+            if resultData:
+                return Response({'result':resultData})
+
+            else:
+                return Response({'message':'No branches of the mentioned banks is found in the specified city'})
 
         else:
             return Response({'message':'Bank Name or City not found in the request'},status=status.HTTP_400_BAD_REQUEST)
